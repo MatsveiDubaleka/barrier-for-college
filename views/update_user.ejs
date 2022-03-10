@@ -1,0 +1,69 @@
+
+<!-- include header -->
+<%- include('include/_header') %>
+<!-- /include header -->
+
+  <!-- Main Site -->
+  <main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+           <div class="filter">
+               <a href="/"><i class="fas fa-angle-double-left"></i> Все Пользователи</a>
+           </div>
+        </div>
+        <div class="form-title text-center">
+            <h2 class="text-dark">Обновить пользователя</h2>
+            <span class="text-light">Используйте форму ниже, чтобы обновить учетную запись</span>
+        </div>
+
+        <!-- add user form -->
+         <!-- form handling -->
+ <form method="POST" id="update_user">
+    <div class="new_user">
+        <div class="form-group">
+            <label for="name" class="text-light">Имя</label>
+            <input type="hidden" name="id" value="<%= user._id %>">
+            <input type="text" name="name" value="<%= user.name %>" placeholder="Анкуда Сергей Николаевич">
+        </div>
+        <div class="form-group">
+            <label for="phone" class="text-light">Телефон</label>
+            <input type="text" name="phone" value="<%= user.phone%>" placeholder="+375447516030" maxlength="13">
+        </div>
+        <div class="form-group">
+            <label for="gender" class="text-light">Пол</label>
+            <div class="radio inline">
+                <input type="radio" id="radio-2" name="gender" value="Мужчина" <%= user.gender == 'Мужчина' ? 'checked' : '' %>>
+                <label for="radio-2" class="radio-label">Мужчина</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-3" name="gender" value="Женщина"  <%= user.gender == 'Женщина' ? 'checked' : '' %> >
+                <label for="radio-3" class="radio-label">Женщина</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="gender" class="text-light">Статус</label>
+            <div class="radio inline">
+                <input type="radio" id="radio-4" name="status" value="Активная" <%= user.status == 'Активная' ? 'checked' : '' %> >
+                <label for="radio-4" class="radio-label">Активная</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-5" name="status" value="Неактивно" <%= user.status == 'Неактивно' ? 'checked' : '' %> >
+                <label for="radio-5" class="radio-label">Неактивно</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">Сохранить</button>
+        </div>
+
+    </div>
+</form>
+       
+    </div>
+</main>
+<!-- /Main Site -->
+
+<!-- include footer -->
+<%- include('include/_footer') %>
+<!-- /include footer -->
