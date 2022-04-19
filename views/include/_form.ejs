@@ -1,42 +1,52 @@
- <!-- form handling -->
- <form action="/api/users" method="POST" id="add_user">
-    <div class="new_user">
-        <div class="form-group">
-            <label for="name" class="text-light">Имя</label>
-            <input type="hidden" name="id" value="">
-            <input type="text" name="name" value="" placeholder="Анкуда Сергей Николаевич">
-        </div>
-        <div class="form-group">
-            <label for="phone" class="text-light">Телефон</label>
-            <input type="text" name="phone" value="" placeholder="+375447516030" maxlength="13">
-        </div>
-        <div class="form-group">
-            <label for="gender" class="text-light">Пол</label>
-            <div class="radio inline">
-                <input type="radio" id="radio-2" name="gender" value="Мужчина" >
-                <label for="radio-2" class="radio-label">Мужчина</label>
-            </div>
-            <div class="radio inline">
-                <input type="radio" id="radio-3" name="gender" value="Женщина" >
-                <label for="radio-3" class="radio-label">Женщина</label>
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label for="gender" class="text-light">Статус</label>
-            <div class="radio inline">
-                <input type="radio" id="radio-4" name="status" value="Активная" >
-                <label for="radio-4" class="radio-label">Активная</label>
-            </div>
-            <div class="radio inline">
-                <input type="radio" id="radio-5" name="status" value="Неактивно" >
-                <label for="radio-5" class="radio-label">Неактивно</label>
-            </div>
-        </div>
-
-        <div class="form-group">
-            <button type="submit" class="btn text-dark update">Сохранить</button>
-        </div>
-
+<!-- form handling -->
+<form action="/api/users" method="POST" id="add_user">
+  <div class="new_user">
+    <div class="form-group">
+      <label for="name" class="text-light">Имя</label>
+      <input type="hidden" name="id" value="" />
+      <input
+        type="text"
+        name="name"
+        value=""
+        placeholder="Анкуда Сергей Николаевич"
+      />
     </div>
+    <div class="form-group">
+      <label for="phone" class="text-light">Телефон</label>
+      <input
+        type="text"
+        name="phone"
+        value=""
+        placeholder="+375447516030"
+        maxlength="13"
+      />
+    </div>
+    <div class="form-group">
+      <label for="gender" class="text-light">Пол</label>
+      <div class="radio inline">
+        <input type="radio" id="radio-2" name="gender" value="Мужчина" />
+        <label for="radio-2" class="radio-label">Мужчина</label>
+      </div>
+      <div class="radio inline">
+        <input type="radio" id="radio-3" name="gender" value="Женщина" />
+        <label for="radio-3" class="radio-label">Женщина</label>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="gender" class="text-light">Телефон</label>
+      <div class="radio inline">
+        <input type="radio" id="radio-4" name="status" value="Активен" />
+        <label for="radio-4" class="radio-label">Активен</label>
+      </div>
+      <div class="radio inline">
+        <input type="radio" id="radio-5" name="status" value="Неактивен" />
+        <label for="radio-5" class="radio-label">Неактивен</label>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <button type="submit" class="btn text-dark update">Сохранить</button>
+    </div>
+  </div>
 </form>
